@@ -13,6 +13,7 @@
          Which Infinispan version do you want to use?  Released versions are always more reliable than snapshots!
       -->
       <version.infinispan>8.1.0.Final</version.infinispan>
+      <version.log4j>2.3</version.log4j>
    </properties>
 
    <dependencies>
@@ -20,6 +21,16 @@
          <groupId>org.infinispan</groupId>
          <artifactId>infinispan-embedded</artifactId>
          <version>${version.infinispan}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-core</artifactId>
+         <version>${version.log4j}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.apache.logging.log4j</groupId>
+         <artifactId>log4j-jcl</artifactId>
+         <version>${version.log4j}</version>
       </dependency>
    </dependencies>
 

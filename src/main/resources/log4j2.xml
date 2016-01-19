@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration verbose="false" status="warn" packages="org.infinispan.util.logging.log4j">
+
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %-5p [%c] (%t:%x) %m%n"/>
+            <ThresholdFilter level="info"/>
+    </Console>
+   </Appenders>
+
+   <Loggers>
+       <Logger name="org.infinispan" level="error" />
+       <Logger name="org.jgroups" level="error"/>
+       <Root level="info">
+          <AppenderRef ref="STDOUT"/>
+       </Root>
+   </Loggers>
+
+</Configuration>
