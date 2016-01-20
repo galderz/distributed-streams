@@ -1,4 +1,4 @@
-package org.infinispan.data;
+package org.infinispan.streams;
 
 public class LevenshteinDistance {
    private static int minimum(int a, int b, int c) {

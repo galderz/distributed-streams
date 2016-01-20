@@ -1,19 +1,11 @@
-package org.infinispan.data;
-
-import org.infinispan.commons.api.functional.EntryVersion;
-import org.infinispan.commons.api.functional.EntryView;
-import org.infinispan.commons.api.functional.MetaParam;
-import org.infinispan.commons.marshall.Externalizer;
-import org.infinispan.commons.marshall.SerializeFunctionWith;
+package org.infinispan.streams;
 
 import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Function;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class WhatIsStream {

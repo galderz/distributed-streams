@@ -1,4 +1,4 @@
-package org.infinispan.data;
+package org.infinispan.streams;
 
 import org.infinispan.Cache;
 import org.infinispan.manager.EmbeddedCacheManager;
