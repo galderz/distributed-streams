@@ -23,6 +23,11 @@
          <version>${version.infinispan}</version>
       </dependency>
       <dependency>
+         <groupId>org.infinispan</groupId>
+         <artifactId>infinispan-remote</artifactId>
+         <version>${version.infinispan}</version>
+      </dependency>
+      <dependency>
          <groupId>org.apache.logging.log4j</groupId>
          <artifactId>log4j-core</artifactId>
          <version>${version.log4j}</version>
