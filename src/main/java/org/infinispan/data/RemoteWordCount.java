@@ -2,7 +2,6 @@ package org.infinispan.data;
 
 import org.infinispan.client.hotrod.RemoteCache;
 import org.infinispan.client.hotrod.RemoteCacheManager;
-import org.infinispan.commons.api.BasicCache;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,6 +18,10 @@ public class RemoteWordCount {
    private static final String SCRIPT_CACHE = "___script_cache";
 
    public static void main(String[] args) throws Exception {
+
+      //wrong type since BasicLogger has been relocated in embedded package.
+//      org.jboss.logging.BasicLogger log = org.infinispan.commons.logging.BasicLogFactory.getLog(RemoteWordCount.class);
+
       RemoteCacheManager remoteCacheManager = new RemoteCacheManager();
       RemoteCache<Integer, String> cache = remoteCacheManager.getCache();
 
