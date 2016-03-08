@@ -36,6 +36,7 @@ public class SimilarWords {
       // Store sentences along with index in cache
       IntStream.range(0, phrases.size())
             .forEach(i -> cache.put(i, phrases.get(i)));
+
    }
 
    static List<String> getWordList() {

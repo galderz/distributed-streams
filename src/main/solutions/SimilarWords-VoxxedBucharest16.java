@@ -43,7 +43,7 @@ public class SimilarWords {
       String word = "cat";
       int maxEditDistance = 1;
       List<String> similarWords = cache.values().stream()
-            .flatMap(p -> Arrays.asList(p.split(" ")).stream())
+            .flatMap(p -> Arrays.stream(p.split(" ")))
             .filter(w -> LevenshteinDistance.computeLevenshteinDistance(w, word) == maxEditDistance)
             .collect(ArrayList::new, List::add, List::addAll);
 
