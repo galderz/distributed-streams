@@ -36,6 +36,18 @@ public class SimilarWords {
       // Store sentences along with index in cache
       IntStream.range(0, phrases.size())
             .forEach(i -> cache.put(i, phrases.get(i)));
+
+      // Empowered by the Levenshtein distance implementation, given a word
+      // find similar words in the cache  according to the provided maximum
+      // edit distance:
+      String word = "cat";
+      int maxEditDistance = 1;
+      List<String> similarWords = cache.values().stream()
+            .flatMap(p -> Arrays.asList(p.split(" ")).stream())
+            .filter(w -> LevenshteinDistance.computeLevenshteinDistance(w, word) == maxEditDistance)
+            .collect(ArrayList::new, List::add, List::addAll);
+
+      System.out.printf("Words similar to `cat` with 1 character difference: %s%n", similarWords);
    }
 
    static List<String> getWordList() {
